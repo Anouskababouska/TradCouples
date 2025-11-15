@@ -3,334 +3,248 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TradCouples</title>
+  <title>Trad Couples | Faith, Family, Freedom</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo-link" aria-label="TradCouples home">
-        <img src="assets/tradcouples-logo-navy.png" alt="TradCouples logo" class="logo" />
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#welcome">How It Works</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
+  <header class="tc-header">
+    <div class="tc-container tc-header-inner">
+      <div class="tc-logo">
+        <!-- If you have a crest image, replace the text with <img src="crest.png" alt="Trad Couples crest" /> -->
+        <span class="tc-logo-mark">TC</span>
+        <span class="tc-logo-text">Trad Couples</span>
+      </div>
+      <nav class="tc-nav">
+        <a href="#how-it-works">How it works</a>
+        <a href="#membership">Membership</a>
+        <a href="#safety">Safety</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn cta" href="#subscription">Start Your Journey</a>
+      <a href="#join" class="tc-btn tc-btn-outline">Log in</a>
     </div>
   </header>
 
-  <main id="top">
-    <section id="hero" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>MATCHMAKING FOR TRADITIONAL CONSERVATIVE COUPLES</h1>
-          <p>Experience a refined matchmaking journey that honours your values and fosters meaningful, purpose-driven connections.</p>
-          <a class="btn cta" href="#subscription">START YOUR JOURNEY</a>
-        </div>
-        <div class="hero-media" role="presentation" aria-hidden="true"></div>
-      </div>
-    </section>
+  <main>
+    <!-- HERO -->
+    <section class="tc-hero">
+      <div class="tc-container tc-hero-grid">
+        <div class="tc-hero-copy">
+          <div class="tc-badge">
+            <span class="tc-badge-pill">Faith · Family · Freedom</span>
+          </div>
+          <h1>Serious matchmaking for traditional men and women</h1>
+          <p class="tc-hero-sub">
+            Trad Couples is a private matchmaking platform for opposite-gender couples only.  
+            Built for people who value commitment, shared values, and family.
+          </p>
 
-    <section id="difference" class="difference-section">
-  <div class="container difference-layout">
-    <!-- LEFT: WHY TRADCOUPLES -->
-    <div class="difference-text">
-      <h2 class="section-title">Discover the TradCouples Difference</h2>
-      <p class="difference-subtitle">
-        Thoughtful matchmaking for traditional, faith-centred couples – without the noise, swiping, or games.
-      </p>
-
-      <ul class="benefits-list">
-        <li class="benefit-item">
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          <span>No more endless swiping through thousands of profiles.</span>
-        </li>
-        <li class="benefit-item">
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          <span>Matches based on brief, meaningful questions about who you are and what you value.</span>
-        </li>
-        <li class="benefit-item">
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          <span>Patented system that connects you with the right people – not just more people.</span>
-        </li>
-        <li class="benefit-item">
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          <span>Clear, safe communication channels built for serious, faith-driven relationships.</span>
-        </li>
-      </ul>
-
-      <a href="#subscription" class="btn cta-btn">Start Your Journey</a>
-    </div>
-
-    <!-- RIGHT: IMAGES -->
-    <div class="difference-images">
-      <figure class="difference-image">
-        <img src="assets/tradcouples-photo-1.jpg" alt="Traditional couple chatting over coffee">
-      </figure>
-      <figure class="difference-image">
-        <img src="assets/tradcouples-photo-2.jpg" alt="Man and woman working and talking together in a cosy café">
-      </figure>
-    </div>
-  </div>
-
-  <!-- SECOND ROW: VALUES / FOR / NOT FOR -->
-  <div class="container difference-cards">
-    <article class="pill-card">
-      <h3 class="pill-title">Our Values</h3>
-      <ul class="pill-list">
-        <li>
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          Cherishing tradition and family roles.
-        </li>
-        <li>
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          Embracing Christian faith and shared values.
-        </li>
-        <li>
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          Building strong, generational family foundations.
-        </li>
-      </ul>
-    </article>
-
-    <article class="pill-card">
-      <h3 class="pill-title">For</h3>
-      <ul class="pill-list">
-        <li>
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          Individuals seeking long-term commitment.
-        </li>
-        <li>
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          Those who value a faith-centred life.
-        </li>
-        <li>
-          <span class="icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 6.5 10 17 4 11l1.6-1.6L10 13.8 18.4 5z" />
-            </svg>
-          </span>
-          Men and women who hold traditional conservative beliefs.
-        </li>
-      </ul>
-    </article>
-
-    <article class="pill-card">
-      <h3 class="pill-title">Not For</h3>
-      <ul class="pill-list">
-        <li>
-          <span class="icon-circle icon-circle--x" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M8.5 7.1 12 10.6l3.5-3.5 1.4 1.4L13.4 12l3.5 3.5-1.4 1.4L12 13.4l-3.5 3.5-1.4-1.4L10.6 12 7.1 8.5z" />
-            </svg>
-          </span>
-          Casual dating or hookup culture.
-        </li>
-        <li>
-          <span class="icon-circle icon-circle--x" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M8.5 7.1 12 10.6l3.5-3.5 1.4 1.4L13.4 12l3.5 3.5-1.4 1.4L12 13.4l-3.5 3.5-1.4-1.4L10.6 12 7.1 8.5z" />
-            </svg>
-          </span>
-          Progressive or liberal dating culture.
-        </li>
-        <li>
-          <span class="icon-circle icon-circle--x" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M8.5 7.1 12 10.6l3.5-3.5 1.4 1.4L13.4 12l3.5 3.5-1.4 1.4L12 13.4l-3.5 3.5-1.4-1.4L10.6 12 7.1 8.5z" />
-            </svg>
-          </span>
-          Anyone who is unsure about long-term commitment.
-        </li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-    <section id="welcome" class="longform-section alt-image-right">
-      <div class="container longform-inner">
-        <div class="longform-text">
-          <p class="eyebrow">WELCOME TO TRADCOUPLES</p>
-          <h2>FAITH. FAMILY. FREEDOM.</h2>
-          <p>In a world that often shifts from timeless values, we stand for what matters: real relationships, traditional principles, Christian faith, strength, and family.</p>
-          <p>Are you looking for a partner who shares your beliefs, honours commitment, and values purpose over convenience? Someone who embraces faith, family roles, and long-term connection?</p>
-          <p>Join thousands of like-minded individuals who are taking their love lives back from a broken modern dating culture. We do not apologise for tradition — we celebrate it.</p>
-        </div>
-        <div class="longform-media" role="presentation" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <section class="longform-section alt-image-left">
-      <div class="container longform-inner">
-        <div class="longform-media media-left" role="presentation" aria-hidden="true"></div>
-        <div class="longform-text">
-          <h2>Why TradCouples</h2>
-          <ul>
-            <li>Matchmaking based on shared beliefs and long-term goals</li>
-            <li>Profiles that prioritise commitment over casual dating</li>
-            <li>Real filters — no endless scrolling</li>
-            <li>No confusion, no agendas — just clarity, purpose, and conviction</li>
-            <li>A personal, human-centred approach to modern matchmaking</li>
+          <ul class="tc-hero-list">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Opposite-gender matches only, no casual swiping.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-heart"></i>
+              <span>Manually reviewed profiles and value-aligned questions.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-church"></i>
+              <span>Ideal for Christians and those with traditional family values.</span>
+            </li>
           </ul>
-          <p>This is old-fashioned matchmaking in a high-tech world — intentional, meaningful, and built for those who value faith, family, and commitment.</p>
-          <p>Like a trusted aunt gently setting you up, our process is thoughtful and careful — with the added benefit that you can review profiles and compatibility before you take the next step.</p>
+
+          <div class="tc-hero-actions" id="join">
+            <a href="#membership" class="tc-btn tc-btn-primary">Join the early access list</a>
+            <p class="tc-hero-note">No public launch yet. Limited early spots available.</p>
+          </div>
+        </div>
+
+        <div class="tc-hero-image">
+          <!-- Replace hero-trad-couples.jpg with your own image file name -->
+          <div class="tc-hero-card">
+            <div class="tc-hero-photo"></div>
+            <div class="tc-hero-overlay">
+              <p class="tc-hero-overlay-title">A place for intentional matches</p>
+              <p class="tc-hero-overlay-text">
+                No endless swiping. Answer in-depth questions and connect with people who share your beliefs about family and commitment.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="longform-section alt-image-right">
-      <div class="container longform-inner">
-        <div class="longform-text">
-          <h2>Your Safety, Our Priority</h2>
-          <p>We understand the importance of a safe, respectful environment when seeking a serious relationship. TradCouples takes privacy and security seriously, with strict verification processes to protect your experience.</p>
-          <p>Our commitment is simple: we safeguard the platform so you can focus on what truly matters — finding someone who shares your values, faith, and dreams.</p>
+    <!-- HOW IT WORKS -->
+    <section class="tc-section" id="how-it-works">
+      <div class="tc-container">
+        <header class="tc-section-head">
+          <h2>How Trad Couples works</h2>
+          <p>Built to slow you down, ask better questions, and help you meet someone serious.</p>
+        </header>
+
+        <div class="tc-steps-grid">
+          <div class="tc-step-card">
+            <div class="tc-step-icon">
+              <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <h3>Create a thoughtful profile</h3>
+            <p>
+              Answer value-based questions about faith, family, gender roles, and future plans so matches can see what really matters to you.
+            </p>
+          </div>
+
+          <div class="tc-step-card">
+            <div class="tc-step-icon">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3>View compatibility insights</h3>
+            <p>
+              Our matching logic highlights alignment on key areas instead of just looks and location.
+            </p>
+          </div>
+
+          <div class="tc-step-card">
+            <div class="tc-step-icon">
+              <i class="fa-solid fa-messages"></i>
+            </div>
+            <h3>Connect with intention</h3>
+            <p>
+              Once you upgrade to Premium, you can message, build a connection, and decide whether to meet in person.
+            </p>
+          </div>
         </div>
-        <div class="longform-media media-safety" role="presentation" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="plans" class="plans-section" aria-labelledby="plans-heading">
-      <div class="container">
-        <h2 id="plans-heading" class="section-title">SUBSCRIPTION PLANS</h2>
-        <div class="plan-cards">
-          <article class="plan-card">
-            <h3>Free Trial</h3>
-            <p>14 days of full Premium access</p>
-            <p>All browsing restrictions removed during your trial</p>
-            <p class="price">14 days free</p>
-            <a class="btn cta" href="#subscription">START TRIAL</a>
-          </article>
-          <article class="plan-card plan-card-featured">
-            <div class="featured-band">Most Popular</div>
+    <!-- MEMBERSHIP (NO LIMITED TIER HERE) -->
+    <section class="tc-section tc-section-alt" id="membership">
+      <div class="tc-container">
+        <header class="tc-section-head">
+          <h2>Membership built for serious relationships</h2>
+          <p>
+            Start with a free trial, then stay for the depth of the conversations and quality of matches.
+          </p>
+        </header>
+
+        <div class="tc-membership-grid">
+          <div class="tc-membership-card">
+            <div class="tc-tag tc-tag-soft">Early access</div>
+            <h3>Free trial</h3>
+            <p class="tc-membership-price">R0 for your trial period</p>
+            <ul class="tc-membership-list">
+              <li><i class="fa-solid fa-check"></i>Full Premium access during the trial.</li>
+              <li><i class="fa-solid fa-check"></i>Unlimited messaging while your trial is active.</li>
+              <li><i class="fa-solid fa-check"></i>Access to full compatibility insights.</li>
+            </ul>
+            <p class="tc-membership-foot">
+              After the trial ends you can choose whether to upgrade to Premium.
+            </p>
+          </div>
+
+          <div class="tc-membership-card tc-membership-card-primary">
+            <div class="tc-tag tc-tag-strong">Most popular</div>
             <h3>Premium</h3>
-            <p>Unlimited messaging</p>
-            <p>Full compatibility scores</p>
-            <p class="price">$19.90 / month</p>
-            <p class="extra">Full access to messaging, compatibility tools, and advanced filters</p>
-            <a class="btn cta" href="#subscription">Start Your Journey</a>
-          </article>
-          <article class="plan-card">
-            <h3>Limited</h3>
-            <p>View-only access after your trial ends</p>
-            <p>Browse profiles with limited visibility</p>
-            <p class="price">Free</p>
-            <a class="btn cta" href="#subscription">LEARN MORE</a>
-          </article>
+            <p class="tc-membership-price">Pricing to be announced at launch</p>
+            <ul class="tc-membership-list">
+              <li><i class="fa-solid fa-check"></i>Unlimited messages and full profile access.</li>
+              <li><i class="fa-solid fa-check"></i>Priority placement in match results.</li>
+              <li><i class="fa-solid fa-check"></i>Access to all filters and search tools.</li>
+            </ul>
+            <p class="tc-membership-foot">
+              Join the waitlist now and be the first to know when Premium opens.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="subscription" class="subscription-cta" aria-labelledby="subscription-heading">
-      <div class="container subscription-inner">
-        <h2 id="subscription-heading">SUBSCRIPTION</h2>
-        <p>Early access members receive a complimentary 14-day Premium trial with full compatibility tools.</p>
-        <a class="btn cta" href="#plans">Start Your Journey</a>
+    <!-- SAFETY -->
+    <section class="tc-section" id="safety">
+      <div class="tc-container">
+        <header class="tc-section-head">
+          <h2>Safety and values first</h2>
+          <p>
+            We take both your safety and your convictions seriously.
+          </p>
+        </header>
+
+        <div class="tc-safety-grid">
+          <div class="tc-safety-item">
+            <h3>Opposite-gender only</h3>
+            <p>
+              Trad Couples is for men and women seeking a traditional relationship and family life. The platform is not set up for any other pairing.
+            </p>
+          </div>
+          <div class="tc-safety-item">
+            <h3>Report and review tools</h3>
+            <p>
+              Profiles can be reported for behaviour that violates our standards, and repeat offenders will be removed.
+            </p>
+          </div>
+          <div class="tc-safety-item">
+            <h3>Practical safety guidance</h3>
+            <p>
+              We provide common-sense guidelines for online interaction and first meetings, including advice tailored to women.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="faq" class="faq-section" aria-labelledby="faq-heading">
-      <div class="container">
-        <h2 id="faq-heading" class="section-title">Popular Frequently Asked Questions</h2>
-        <p class="faq-subheading">Do you have a question regarding our service?</p>
-        <div class="accordion" role="list">
-          <details class="accordion-item">
-            <summary>What is TradCouples, and how does it differ from other dating sites?</summary>
-            <p>TradCouples is a values-based matchmaking platform created for singles who prioritise faith, family, and long-term commitment. There is no endless scrolling or casual dating culture. Instead, we use an intentional, curated approach designed to help you find someone who shares your beliefs and relationship goals. Only men looking for women and women looking for men are accepted. No hookup culture.</p>
+    <!-- SIMPLE FAQ STUB -->
+    <section class="tc-section tc-section-alt" id="faq">
+      <div class="tc-container">
+        <header class="tc-section-head">
+          <h2>Frequently asked questions</h2>
+          <p>Short answers for the most obvious questions. You can refine these later.</p>
+        </header>
+
+        <div class="tc-faq-list">
+          <details>
+            <summary>Is Trad Couples live yet?</summary>
+            <p>
+              We are in a closed early access phase. Join the waitlist above to hear when your region opens.
+            </p>
           </details>
-          <details class="accordion-item">
-            <summary>Who is TradCouples for?</summary>
-            <p>TradCouples is for singles who want a relationship built on traditional frameworks — where commitment, faith, and shared values form the foundation. Many members prefer clear relationship roles, long-term goals, and a family-centred lifestyle.</p>
+          <details>
+            <summary>Do I have to be Christian to join?</summary>
+            <p>
+              Trad Couples is designed for people who value faith, family, and freedom. Many members are Christian, but the core requirement is a traditional view of family and gender roles.
+            </p>
           </details>
-          <details class="accordion-item">
-            <summary>How does TradCouples maintain a safe and respectful environment?</summary>
-            <p>We take safety seriously. Through identity verification, community guidelines, and active moderation, we ensure TradCouples remains a trustworthy, respectful space for like-minded individuals pursuing meaningful relationships.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>How do I sign up?</summary>
-            <p>Click “Start Your Journey” on the homepage, create your profile, and complete our verification process. Once approved, you can browse profiles and begin connecting with compatible members.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>Is there a membership fee?</summary>
-            <p>Yes. We offer tiered membership options with increasing levels of access and features. This helps maintain a high-quality community and ensures that matches are serious and intentional. See our pricing section for details.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>Do I have to be religious to join?</summary>
-            <p>While many of our members are people of faith, it is not a requirement. The core expectation is a commitment to traditional values, family-centred living, and purposeful relationships.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>How do I create a profile?</summary>
-            <p>Sign up for free and complete your profile details to reflect your values, lifestyle, and relationship goals. The more accurate your profile, the better your match results.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>How does the matchmaking process work?</summary>
-            <p>After registration, you will complete a detailed profile about your values, long-term goals, and lifestyle preferences. Our algorithm — combined with human review — suggests members who align with your beliefs and relationship intentions.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>How do I find the right match?</summary>
-            <p>Our system highlights profiles based on your compatibility preferences. You can then explore, communicate, and build connections with people who resonate with your lifestyle and values.</p>
-          </details>
-          <details class="accordion-item">
-            <summary>Can I set specific preferences for my matches?</summary>
-            <p>Yes. You can personalise your preferences across age, location, faith alignment, lifestyle values, family goals, and relationship priorities.</p>
+          <details>
+            <summary>Will there be country-specific options?</summary>
+            <p>
+              Yes. As we grow, we plan to open more regions and improve location filters so you can find matches closer to you.
+            </p>
           </details>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-brand">TRADCOUPLES – FAITH. FAMILY. FREEDOM.</p>
-      <p class="footer-copy">© TradCouples 2024. All rights reserved.</p>
-      <nav aria-label="Footer" class="footer-nav">
-        <ul>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Refund Policy</a></li>
-          <li><a href="#">Safety Tips</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+  <footer class="tc-footer">
+    <div class="tc-container tc-footer-inner">
+      <div class="tc-footer-left">
+        <p class="tc-footer-logo">Trad Couples</p>
+        <p class="tc-footer-text">
+          Faith. Family. Freedom.
+        </p>
+      </div>
+      <div class="tc-footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Safety tips</a>
+        <a href="#">Cookie policy</a>
+      </div>
     </div>
   </footer>
 </body>
