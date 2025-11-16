@@ -65,6 +65,8 @@ img {
   box-shadow: 0 22px 48px rgba(14, 42, 71, 0.35);
 }
 
+/* HEADER */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -79,7 +81,7 @@ img {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 3vw, 3rem);
-  padding: clamp 0.9rem 0;
+  padding: 0.9rem 0;
 }
 
 .logo {
@@ -87,11 +89,6 @@ img {
   width: auto;
   filter: brightness(1.25);
 }
-@media (max-width: 600px) {
-  .logo {
-    height: 80px;
-  }
-  }
 
 .site-nav {
   margin-left: auto;
@@ -142,6 +139,8 @@ main {
   padding-bottom: 5rem;
 }
 
+/* HERO */
+
 .hero {
   padding: clamp(5rem, 12vw, 8rem) 0 clamp(4rem, 10vw, 7rem);
   background: linear-gradient(135deg, rgba(247, 244, 239, 0.14) 0%, rgba(30, 90, 139, 0.35) 45%, rgba(14, 42, 71, 0.4) 100%);
@@ -175,6 +174,8 @@ main {
   border: 1px solid rgba(216, 227, 237, 0.35);
   box-shadow: 0 28px 60px rgba(6, 17, 30, 0.5);
 }
+
+/* CARDS */
 
 .section-title {
   font-family: "Playfair Display", "Times New Roman", serif;
@@ -272,6 +273,8 @@ main {
   border: 1px solid rgba(30, 90, 139, 0.18);
 }
 
+/* LONGFORM SECTIONS */
+
 .longform-section {
   padding: clamp(4rem, 9vw, 6rem) 0;
   color: var(--white);
@@ -333,6 +336,8 @@ main {
 .media-left {
   order: -1;
 }
+
+/* PLANS */
 
 .plans-section {
   background: var(--page-bg);
@@ -409,32 +414,100 @@ main {
   box-shadow: 0 12px 25px rgba(30, 90, 139, 0.35);
 }
 
-.subscription-cta {
+/* NEW SUBSCRIPTION SECTION */
+
+.subscription-section {
+  background: var(--page-bg);
+  color: var(--navy);
   padding: clamp(4rem, 9vw, 6rem) 0;
 }
 
-.subscription-inner {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 28px;
-  padding: clamp(3rem, 6vw, 4rem);
-  border: 1px solid rgba(216, 227, 237, 0.18);
-  box-shadow: 0 24px 55px rgba(5, 12, 24, 0.5);
+.subscription-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
 }
 
-.subscription-inner h2 {
-  margin: 0 0 1rem;
+/* left visual – replace with real image later if you want */
+.subscription-media {
+  min-height: clamp(260px, 40vw, 420px);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(216, 227, 237, 0.7), rgba(30, 90, 139, 0.5));
+  border: 1px solid rgba(14, 42, 71, 0.1);
+  box-shadow: 0 24px 50px rgba(14, 42, 71, 0.18);
+}
+
+.subscription-panel {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 2.5rem 2.4rem;
+  box-shadow: 0 20px 45px rgba(14, 42, 71, 0.12);
+  border: 1px solid rgba(14, 42, 71, 0.08);
+}
+
+.subscription-panel h2 {
+  margin: 0 0 0.75rem;
   font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 2.5rem);
-  letter-spacing: 0.14em;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--navy);
 }
 
-.subscription-inner p {
-  color: rgba(240, 244, 249, 0.82);
-  margin: 0 0 2rem;
+.subscription-panel > p {
+  margin: 0 0 1.75rem;
+  color: rgba(14, 42, 71, 0.8);
+  font-size: 0.98rem;
 }
+
+.subscription-form {
+  display: grid;
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subscription-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(14, 42, 71, 0.9);
+}
+
+.subscription-form input {
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgba(14, 42, 71, 0.22);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.subscription-form input:focus {
+  outline: 2px solid var(--cta-blue);
+  outline-offset: 1px;
+  border-color: var(--cta-blue);
+}
+
+.subscription-form .btn {
+  width: fit-content;
+  padding-inline: 1.8rem;
+}
+
+.subscription-privacy {
+  margin: 0 0 1.2rem;
+  font-size: 0.9rem;
+  color: rgba(14, 42, 71, 0.75);
+}
+
+.subscription-scripture {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(14, 42, 71, 0.75);
+  text-align: center;
+}
+
+/* FAQ */
 
 .faq-section {
   padding: clamp(4rem, 9vw, 6rem) 0 clamp(5rem, 10vw, 7rem);
@@ -502,6 +575,8 @@ main {
   padding-right: 1.5rem;
 }
 
+/* FOOTER */
+
 .site-footer {
   background: rgba(6, 15, 27, 0.95);
   padding: 3rem 0 3.5rem;
@@ -546,6 +621,8 @@ main {
   color: var(--white);
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .header-inner {
     flex-wrap: wrap;
@@ -581,13 +658,21 @@ main {
 
   .card,
   .plan-card,
-  .subscription-inner,
-  .accordion-item {
+  .accordion-item,
+  .subscription-panel {
     border-radius: 18px;
   }
 
   .media-left {
     order: unset;
+  }
+
+  .subscription-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-media {
+    min-height: 220px;
   }
 }
 
@@ -607,5 +692,13 @@ main {
 
   .plan-card {
     padding: 2.4rem 2rem;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .header-inner {
+    padding: 0.6rem 0;
   }
 }
