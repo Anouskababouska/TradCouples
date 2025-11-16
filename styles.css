@@ -43,8 +43,6 @@ img {
   margin: 0 auto;
 }
 
-/* Buttons */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -67,7 +65,7 @@ img {
   box-shadow: 0 22px 48px rgba(14, 42, 71, 0.35);
 }
 
-/* Header */
+/* HEADER */
 
 .site-header {
   position: sticky;
@@ -83,20 +81,13 @@ img {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 3vw, 3rem);
-  padding: clamp(0.9rem, 1.2vw, 1.2rem) 0;
+  padding: clamp(0.9rem, 1.4vw, 1.2rem) 0;
 }
 
 .logo {
   height: 120px;
   width: auto;
   filter: brightness(1.25);
-}
-
-/* smaller logo on very small screens */
-@media (max-width: 600px) {
-  .logo {
-    height: 80px;
-  }
 }
 
 .site-nav {
@@ -144,11 +135,13 @@ img {
   white-space: nowrap;
 }
 
+/* MAIN */
+
 main {
   padding-bottom: 5rem;
 }
 
-/* Hero */
+/* HERO */
 
 .hero {
   padding: clamp(5rem, 12vw, 8rem) 0 clamp(4rem, 10vw, 7rem);
@@ -176,44 +169,18 @@ main {
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* Shared media box styles */
-
-.hero-media,
-.longform-media,
-.subscription-media {
-  min-height: clamp(260px, 35vw, 380px);
-  border-radius: 26px;
-  border: 1px solid rgba(216, 227, 237, 0.25);
-  box-shadow: 0 28px 60px rgba(5, 12, 24, 0.55);
+.hero-media {
+  min-height: clamp(280px, 38vw, 420px);
+  border-radius: 28px;
+  background-image: url("assets/hero-couple-field.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  border: 1px solid rgba(216, 227, 237, 0.35);
+  box-shadow: 0 28px 60px rgba(6, 17, 30, 0.5);
 }
 
-/* Specific images */
-
-.hero-media {
-  background-image: url("assets/hero-couple-field.png");
-}
-
-.welcome-media {
-  background-image: url("assets/welcome-hands.png");
-}
-
-.why-media {
-  background-image: url("assets/why-online.png");
-}
-
-.safety-media {
-  background-image: url("assets/Your-Safety-family.jpeg");
-}
-
-/* subscribe image now uses the sunset / safety image */
-.subscription-media {
-  background-image: url("assets/safety-couple-field.png");
-}
-
-/* Sections */
+/* SECTION TITLES */
 
 .section-title {
   font-family: "Playfair Display", "Times New Roman", serif;
@@ -223,13 +190,13 @@ main {
   color: var(--navy);
 }
 
+/* CARDS */
+
 .cards-section {
   background: var(--page-bg);
   color: var(--navy);
   padding: clamp(4rem, 8vw, 6rem) 0;
 }
-
-/* Cards */
 
 .cards-grid {
   display: grid;
@@ -279,8 +246,6 @@ main {
   color: rgba(14, 42, 71, 0.82);
 }
 
-/* Icons */
-
 .icon-check,
 .icon-x {
   display: inline-grid;
@@ -315,7 +280,7 @@ main {
   border: 1px solid rgba(30, 90, 139, 0.18);
 }
 
-/* Longform sections */
+/* LONGFORM SECTIONS */
 
 .longform-section {
   padding: clamp(4rem, 9vw, 6rem) 0;
@@ -367,11 +332,41 @@ main {
   margin-bottom: 0.7rem;
 }
 
+.longform-media {
+  min-height: clamp(260px, 35vw, 380px);
+  border-radius: 26px;
+  border: 1px solid rgba(216, 227, 237, 0.25);
+  box-shadow: 0 28px 60px rgba(5, 12, 24, 0.55);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Per-section images */
+
+.media-welcome {
+  background-image: url("assets/welcome-hands.png");
+}
+
+.media-values {
+  /* use the field family/couple image that is not used elsewhere */
+  background-image: url("assets/safety-couple-field.png");
+}
+
+.media-why {
+  background-image: url("assets/why-online.png");
+}
+
+.media-safety {
+  background-image: url("assets/Your-Safety-family.jpeg");
+}
+
 .media-left {
   order: -1;
 }
 
-/* Plans */
+/* PLANS */
 
 .plans-section {
   background: var(--page-bg);
@@ -448,83 +443,89 @@ main {
   box-shadow: 0 12px 25px rgba(30, 90, 139, 0.35);
 }
 
-/* Subscription section */
+/* SUBSCRIPTION CTA */
 
 .subscription-section {
+  background: var(--page-bg);
   padding: clamp(4rem, 9vw, 6rem) 0;
-  background: #eef3f9;
 }
 
 .subscription-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-  gap: clamp(2.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: clamp(2.5rem, 5vw, 4rem);
   align-items: stretch;
 }
 
+.subscription-media {
+  border-radius: 28px;
+  background-image: url("assets/Your-Safety-family.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 0 28px 60px rgba(6, 17, 30, 0.45);
+  border: 1px solid rgba(216, 227, 237, 0.35);
+}
+
 .subscription-panel {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.96);
   border-radius: 28px;
   padding: clamp(3rem, 6vw, 4rem);
-  box-shadow: 0 24px 55px rgba(5, 12, 24, 0.25);
-  border: 1px solid rgba(216, 227, 237, 0.7);
+  box-shadow: 0 24px 55px rgba(5, 12, 24, 0.5);
+  color: var(--navy);
+  border: 1px solid rgba(216, 227, 237, 0.5);
 }
 
 .subscription-panel h2 {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.2rem;
   font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 3vw, 2.6rem);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--navy);
 }
 
 .subscription-panel p {
   margin: 0 0 1.2rem;
-  color: #273447;
+  color: rgba(14, 42, 71, 0.8);
 }
 
 .subscription-form {
   display: grid;
   gap: 1rem;
-  margin: 1.5rem 0 1.75rem;
+  margin: 1.5rem 0 1.8rem;
 }
 
 .subscription-form label {
   display: grid;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #32415a;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .subscription-form input {
+  padding: 0.9rem 1rem;
   border-radius: 999px;
-  border: 1px solid #c6d4e6;
-  padding: 0.8rem 1.2rem;
-  font-size: 0.95rem;
-  font-family: inherit;
+  border: 1px solid rgba(14, 42, 71, 0.25);
+  font: inherit;
 }
 
 .subscription-form input:focus-visible {
-  outline: 2px solid var(--cta-blue);
+  outline: 3px solid rgba(30, 90, 139, 0.5);
   outline-offset: 2px;
 }
 
 .subscription-form .btn {
   justify-self: flex-start;
-  padding-inline: 2.8rem;
 }
 
 .subscription-privacy {
   font-size: 0.9rem;
-  color: #4a5a72;
+  color: rgba(14, 42, 71, 0.7);
 }
 
 .subscription-scripture {
-  margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: #6b7a92;
+  color: rgba(14, 42, 71, 0.8);
 }
 
 /* FAQ */
@@ -595,7 +596,7 @@ main {
   padding-right: 1.5rem;
 }
 
-/* Footer */
+/* FOOTER */
 
 .site-footer {
   background: rgba(6, 15, 27, 0.95);
@@ -641,7 +642,7 @@ main {
   color: var(--white);
 }
 
-/* Responsive tweaks */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .header-inner {
@@ -691,8 +692,9 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .subscription-media {
-    min-height: 260px;
+  .subscription-form .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -706,8 +708,7 @@ main {
   }
 
   .hero-media,
-  .longform-media,
-  .subscription-media {
+  .longform-media {
     min-height: 240px;
   }
 
