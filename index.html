@@ -150,13 +150,41 @@
       </div>
     </section>
 
-    <section id="subscription" class="subscription-cta" aria-labelledby="subscription-heading">
-      <div class="container subscription-inner">
-        <h2 id="subscription-heading">SUBSCRIPTION</h2>
-        <p>Early access members receive a complimentary 14-day Premium trial with full compatibility tools.</p>
-        <a class="btn cta" href="#plans">GET STARTED</a>
-      </div>
-    </section>
+<section id="subscription" class="subscription-section" aria-labelledby="subscription-heading">
+  <div class="container subscription-grid">
+    <div class="subscription-media" role="presentation" aria-hidden="true"></div>
+
+    <div class="subscription-panel">
+      <h2 id="subscription-heading">Subscribe for early access</h2>
+      <p>
+        Our site officially launches mid 2025. Subscribe now to receive a free or discounted profile
+        and secure your place among the first members.
+      </p>
+
+      <!-- TODO: replace action="#" with your real form endpoint (Brevo / Formspree / etc.) -->
+      <form class="subscription-form" action="#" method="post">
+        <label>
+          Email address*
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Name
+          <input type="text" name="name" />
+        </label>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+
+      <p class="subscription-privacy">
+        Your privacy is our priority. We will keep your information secure and private.
+      </p>
+
+      <p class="subscription-scripture">
+        <em>“Then the Lord God said, ‘It is not good that the man should be alone; I will make him a helper fit for him.’” – Genesis 2:18</em>
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <section id="faq" class="faq-section" aria-labelledby="faq-heading">
       <div class="container">
