@@ -84,8 +84,10 @@ img {
   padding: clamp(0.9rem, 1.4vw, 1.2rem) 0;
 }
 
+/* LOGO – desktop base */
 .logo {
-  height: 120px;
+  height: 80px;
+  max-width: 230px;
   width: auto;
   filter: brightness(1.25);
 }
@@ -190,7 +192,7 @@ main {
   color: var(--navy);
 }
 
-/* CARDS */
+/* CARDS (unused section can stay safely) */
 
 .cards-section {
   background: var(--page-bg);
@@ -350,7 +352,6 @@ main {
 }
 
 .media-values {
-  /* use the field family/couple image that is not used elsewhere */
   background-image: url("assets/safety-couple-field.png");
 }
 
@@ -650,6 +651,12 @@ main {
     justify-content: center;
   }
 
+  /* slightly smaller logo on tablets / small laptops */
+  .logo {
+    height: 60px;
+    max-width: 190px;
+  }
+
   .site-nav {
     order: 2;
     width: 100%;
@@ -699,6 +706,12 @@ main {
 }
 
 @media (max-width: 600px) {
+  /* compact logo on phones */
+  .logo {
+    height: 48px;
+    max-width: 170px;
+  }
+
   .btn {
     width: 100%;
   }
