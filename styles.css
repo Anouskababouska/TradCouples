@@ -87,6 +87,11 @@ img {
   width: auto;
   filter: brightness(1.25);
 }
+@media (max-width: 600px) {
+  .logo {
+    height: 80px;
+  }
+  }
 
 .site-nav {
   margin-left: auto;
