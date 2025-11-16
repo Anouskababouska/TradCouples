@@ -15,8 +15,7 @@ body {
   margin: 0;
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   line-height: 1.7;
-  background:
-    radial-gradient(circle at top, rgba(30, 90, 139, 0.18), transparent 55%),
+  background: radial-gradient(circle at top, rgba(30, 90, 139, 0.18), transparent 55%),
     linear-gradient(180deg, #0b233d 0%, #0e2a47 35%, #0b1c32 100%);
   color: var(--white);
   scroll-behavior: smooth;
@@ -44,7 +43,7 @@ img {
   margin: 0 auto;
 }
 
-/* BUTTONS */
+/* Buttons */
 
 .btn {
   display: inline-flex;
@@ -61,7 +60,6 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 18px 40px rgba(30, 90, 139, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
 }
 
 .btn:hover {
@@ -69,7 +67,7 @@ img {
   box-shadow: 0 22px 48px rgba(14, 42, 71, 0.35);
 }
 
-/* HEADER */
+/* Header */
 
 .site-header {
   position: sticky;
@@ -85,13 +83,20 @@ img {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 3vw, 3rem);
-  padding: clamp(0.9rem, 1.8vw, 1.4rem) 0;
+  padding: clamp(0.9rem, 1.2vw, 1.2rem) 0;
 }
 
 .logo {
   height: 120px;
   width: auto;
   filter: brightness(1.25);
+}
+
+/* smaller logo on very small screens */
+@media (max-width: 600px) {
+  .logo {
+    height: 80px;
+  }
 }
 
 .site-nav {
@@ -139,22 +144,15 @@ img {
   white-space: nowrap;
 }
 
-/* MAIN */
-
 main {
   padding-bottom: 5rem;
 }
 
-/* HERO */
+/* Hero */
 
 .hero {
   padding: clamp(5rem, 12vw, 8rem) 0 clamp(4rem, 10vw, 7rem);
-  background: linear-gradient(
-    135deg,
-    rgba(247, 244, 239, 0.14) 0%,
-    rgba(30, 90, 139, 0.35) 45%,
-    rgba(14, 42, 71, 0.4) 100%
-  );
+  background: linear-gradient(135deg, rgba(247, 244, 239, 0.14) 0%, rgba(30, 90, 139, 0.35) 45%, rgba(14, 42, 71, 0.4) 100%);
 }
 
 .hero-inner {
@@ -178,22 +176,44 @@ main {
   color: rgba(255, 255, 255, 0.78);
 }
 
+/* Shared media box styles */
+
+.hero-media,
+.longform-media,
+.subscription-media {
+  min-height: clamp(260px, 35vw, 380px);
+  border-radius: 26px;
+  border: 1px solid rgba(216, 227, 237, 0.25);
+  box-shadow: 0 28px 60px rgba(5, 12, 24, 0.55);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Specific images */
+
 .hero-media {
-  min-height: clamp(280px, 38vw, 420px);
-  border-radius: 28px;
-  background: linear-gradient(140deg, rgba(216, 227, 237, 0.65), rgba(30, 90, 139, 0.6));
-  border: 1px solid rgba(216, 227, 237, 0.35);
-  box-shadow: 0 28px 60px rgba(6, 17, 30, 0.5);
-  overflow: hidden;
+  background-image: url("assets/hero-couple-field.png");
 }
 
-.hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.welcome-media {
+  background-image: url("assets/welcome-hands.png");
 }
 
-/* SECTION TITLES */
+.why-media {
+  background-image: url("assets/why-online.png");
+}
+
+.safety-media {
+  background-image: url("assets/safety-couple-field.png");
+}
+
+/* subscribe image now uses the sunset / safety image */
+.subscription-media {
+  background-image: url("assets/safety-couple-field.png");
+}
+
+/* Sections */
 
 .section-title {
   font-family: "Playfair Display", "Times New Roman", serif;
@@ -203,13 +223,13 @@ main {
   color: var(--navy);
 }
 
-/* CARDS SECTION */
-
 .cards-section {
   background: var(--page-bg);
   color: var(--navy);
   padding: clamp(4rem, 8vw, 6rem) 0;
 }
+
+/* Cards */
 
 .cards-grid {
   display: grid;
@@ -259,6 +279,8 @@ main {
   color: rgba(14, 42, 71, 0.82);
 }
 
+/* Icons */
+
 .icon-check,
 .icon-x {
   display: inline-grid;
@@ -293,7 +315,7 @@ main {
   border: 1px solid rgba(30, 90, 139, 0.18);
 }
 
-/* LONGFORM SECTIONS */
+/* Longform sections */
 
 .longform-section {
   padding: clamp(4rem, 9vw, 6rem) 0;
@@ -345,26 +367,11 @@ main {
   margin-bottom: 0.7rem;
 }
 
-.longform-media {
-  min-height: clamp(260px, 35vw, 380px);
-  border-radius: 26px;
-  background: linear-gradient(150deg, rgba(216, 227, 237, 0.18), rgba(30, 90, 139, 0.45));
-  border: 1px solid rgba(216, 227, 237, 0.25);
-  box-shadow: 0 28px 60px rgba(5, 12, 24, 0.55);
-  overflow: hidden;
-}
-
-.longform-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .media-left {
   order: -1;
 }
 
-/* PLANS */
+/* Plans */
 
 .plans-section {
   background: var(--page-bg);
@@ -441,77 +448,62 @@ main {
   box-shadow: 0 12px 25px rgba(30, 90, 139, 0.35);
 }
 
-/* SUBSCRIPTION SECTION */
+/* Subscription section */
 
 .subscription-section {
-  background: var(--page-bg);
   padding: clamp(4rem, 9vw, 6rem) 0;
-  color: var(--navy);
+  background: #eef3f9;
 }
 
 .subscription-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
-  gap: clamp(2.5rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 4vw, 3.5rem);
   align-items: stretch;
-}
-
-.subscription-media {
-  border-radius: 28px;
-  background: linear-gradient(135deg, #dfe8f1, #8fb0cc);
-  border: 1px solid rgba(14, 42, 71, 0.12);
-  box-shadow: 0 28px 60px rgba(14, 42, 71, 0.22);
-  overflow: hidden;
-}
-
-.subscription-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .subscription-panel {
   background: var(--white);
   border-radius: 28px;
-  padding: clamp(2.6rem, 4vw, 3.4rem);
-  box-shadow: 0 28px 60px rgba(14, 42, 71, 0.18);
-  border: 1px solid rgba(14, 42, 71, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
+  padding: clamp(3rem, 6vw, 4rem);
+  box-shadow: 0 24px 55px rgba(5, 12, 24, 0.25);
+  border: 1px solid rgba(216, 227, 237, 0.7);
 }
 
 .subscription-panel h2 {
-  margin: 0;
+  margin: 0 0 1.5rem;
   font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 2.4rem);
-  letter-spacing: 0.16em;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--navy);
 }
 
 .subscription-panel p {
-  margin: 0;
-  color: rgba(14, 42, 71, 0.8);
+  margin: 0 0 1.2rem;
+  color: #273447;
 }
 
 .subscription-form {
   display: grid;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin: 1.5rem 0 1.75rem;
 }
 
 .subscription-form label {
   display: grid;
   gap: 0.4rem;
-  font-size: 0.95rem;
-  color: rgba(14, 42, 71, 0.9);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #32415a;
 }
 
 .subscription-form input {
-  padding: 0.7rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(14, 42, 71, 0.2);
-  font: inherit;
+  border: 1px solid #c6d4e6;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.95rem;
+  font-family: inherit;
 }
 
 .subscription-form input:focus-visible {
@@ -521,18 +513,18 @@ main {
 
 .subscription-form .btn {
   justify-self: flex-start;
-  margin-top: 0.4rem;
+  padding-inline: 2.8rem;
 }
 
 .subscription-privacy {
   font-size: 0.9rem;
-  color: rgba(14, 42, 71, 0.7);
+  color: #4a5a72;
 }
 
 .subscription-scripture {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: rgba(14, 42, 71, 0.75);
+  color: #6b7a92;
 }
 
 /* FAQ */
@@ -603,7 +595,7 @@ main {
   padding-right: 1.5rem;
 }
 
-/* FOOTER */
+/* Footer */
 
 .site-footer {
   background: rgba(6, 15, 27, 0.95);
@@ -649,7 +641,7 @@ main {
   color: var(--white);
 }
 
-/* RESPONSIVE */
+/* Responsive tweaks */
 
 @media (max-width: 900px) {
   .header-inner {
@@ -700,7 +692,7 @@ main {
   }
 
   .subscription-media {
-    min-height: 240px;
+    min-height: 260px;
   }
 }
 
@@ -709,16 +701,13 @@ main {
     width: 100%;
   }
 
-  .logo {
-    height: 80px;
-  }
-
   .hero-copy {
     width: 100%;
   }
 
   .hero-media,
-  .longform-media {
+  .longform-media,
+  .subscription-media {
     min-height: 240px;
   }
 
