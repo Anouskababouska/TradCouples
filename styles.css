@@ -15,7 +15,8 @@ body {
   margin: 0;
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   line-height: 1.7;
-  background: radial-gradient(circle at top, rgba(30, 90, 139, 0.18), transparent 55%),
+  background:
+    radial-gradient(circle at top, rgba(30, 90, 139, 0.18), transparent 55%),
     linear-gradient(180deg, #0b233d 0%, #0e2a47 35%, #0b1c32 100%);
   color: var(--white);
   scroll-behavior: smooth;
@@ -43,6 +44,8 @@ img {
   margin: 0 auto;
 }
 
+/* BUTTONS */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -58,6 +61,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 18px 40px rgba(30, 90, 139, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -81,7 +85,7 @@ img {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 3vw, 3rem);
-  padding: 0.9rem 0;
+  padding: clamp(0.9rem, 1.8vw, 1.4rem) 0;
 }
 
 .logo {
@@ -135,6 +139,8 @@ img {
   white-space: nowrap;
 }
 
+/* MAIN */
+
 main {
   padding-bottom: 5rem;
 }
@@ -143,7 +149,12 @@ main {
 
 .hero {
   padding: clamp(5rem, 12vw, 8rem) 0 clamp(4rem, 10vw, 7rem);
-  background: linear-gradient(135deg, rgba(247, 244, 239, 0.14) 0%, rgba(30, 90, 139, 0.35) 45%, rgba(14, 42, 71, 0.4) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(247, 244, 239, 0.14) 0%,
+    rgba(30, 90, 139, 0.35) 45%,
+    rgba(14, 42, 71, 0.4) 100%
+  );
 }
 
 .hero-inner {
@@ -173,9 +184,16 @@ main {
   background: linear-gradient(140deg, rgba(216, 227, 237, 0.65), rgba(30, 90, 139, 0.6));
   border: 1px solid rgba(216, 227, 237, 0.35);
   box-shadow: 0 28px 60px rgba(6, 17, 30, 0.5);
+  overflow: hidden;
 }
 
-/* CARDS */
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTION TITLES */
 
 .section-title {
   font-family: "Playfair Display", "Times New Roman", serif;
@@ -184,6 +202,8 @@ main {
   margin: 0 0 2.8rem;
   color: var(--navy);
 }
+
+/* CARDS SECTION */
 
 .cards-section {
   background: var(--page-bg);
@@ -331,6 +351,13 @@ main {
   background: linear-gradient(150deg, rgba(216, 227, 237, 0.18), rgba(30, 90, 139, 0.45));
   border: 1px solid rgba(216, 227, 237, 0.25);
   box-shadow: 0 28px 60px rgba(5, 12, 24, 0.55);
+  overflow: hidden;
+}
+
+.longform-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .media-left {
@@ -414,97 +441,98 @@ main {
   box-shadow: 0 12px 25px rgba(30, 90, 139, 0.35);
 }
 
-/* NEW SUBSCRIPTION SECTION */
+/* SUBSCRIPTION SECTION */
 
 .subscription-section {
   background: var(--page-bg);
-  color: var(--navy);
   padding: clamp(4rem, 9vw, 6rem) 0;
+  color: var(--navy);
 }
 
 .subscription-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 5vw, 4rem);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 4vw, 4rem);
+  align-items: stretch;
 }
 
-/* left visual – replace with real image later if you want */
 .subscription-media {
-  min-height: clamp(260px, 40vw, 420px);
-  border-radius: 24px;
-  background: linear-gradient(135deg, rgba(216, 227, 237, 0.7), rgba(30, 90, 139, 0.5));
-  border: 1px solid rgba(14, 42, 71, 0.1);
-  box-shadow: 0 24px 50px rgba(14, 42, 71, 0.18);
+  border-radius: 28px;
+  background: linear-gradient(135deg, #dfe8f1, #8fb0cc);
+  border: 1px solid rgba(14, 42, 71, 0.12);
+  box-shadow: 0 28px 60px rgba(14, 42, 71, 0.22);
+  overflow: hidden;
+}
+
+.subscription-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .subscription-panel {
   background: var(--white);
-  border-radius: 24px;
-  padding: 2.5rem 2.4rem;
-  box-shadow: 0 20px 45px rgba(14, 42, 71, 0.12);
+  border-radius: 28px;
+  padding: clamp(2.6rem, 4vw, 3.4rem);
+  box-shadow: 0 28px 60px rgba(14, 42, 71, 0.18);
   border: 1px solid rgba(14, 42, 71, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
 .subscription-panel h2 {
-  margin: 0 0 0.75rem;
+  margin: 0;
   font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
-  letter-spacing: 0.12em;
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--navy);
 }
 
-.subscription-panel > p {
-  margin: 0 0 1.75rem;
+.subscription-panel p {
+  margin: 0;
   color: rgba(14, 42, 71, 0.8);
-  font-size: 0.98rem;
 }
 
 .subscription-form {
   display: grid;
-  gap: 1.1rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .subscription-form label {
   display: grid;
-  gap: 0.35rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  gap: 0.4rem;
+  font-size: 0.95rem;
   color: rgba(14, 42, 71, 0.9);
 }
 
 .subscription-form input {
-  padding: 0.7rem 0.85rem;
-  border-radius: 8px;
-  border: 1px solid rgba(14, 42, 71, 0.22);
-  font-size: 0.95rem;
-  font-family: inherit;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(14, 42, 71, 0.2);
+  font: inherit;
 }
 
-.subscription-form input:focus {
+.subscription-form input:focus-visible {
   outline: 2px solid var(--cta-blue);
-  outline-offset: 1px;
-  border-color: var(--cta-blue);
+  outline-offset: 2px;
 }
 
 .subscription-form .btn {
-  width: fit-content;
-  padding-inline: 1.8rem;
+  justify-self: flex-start;
+  margin-top: 0.4rem;
 }
 
 .subscription-privacy {
-  margin: 0 0 1.2rem;
   font-size: 0.9rem;
-  color: rgba(14, 42, 71, 0.75);
+  color: rgba(14, 42, 71, 0.7);
 }
 
 .subscription-scripture {
-  margin: 0;
+  margin-top: 0.5rem;
   font-size: 0.9rem;
   color: rgba(14, 42, 71, 0.75);
-  text-align: center;
 }
 
 /* FAQ */
@@ -658,8 +686,8 @@ main {
 
   .card,
   .plan-card,
-  .accordion-item,
-  .subscription-panel {
+  .subscription-panel,
+  .accordion-item {
     border-radius: 18px;
   }
 
@@ -672,13 +700,17 @@ main {
   }
 
   .subscription-media {
-    min-height: 220px;
+    min-height: 240px;
   }
 }
 
 @media (max-width: 600px) {
   .btn {
     width: 100%;
+  }
+
+  .logo {
+    height: 80px;
   }
 
   .hero-copy {
@@ -692,13 +724,5 @@ main {
 
   .plan-card {
     padding: 2.4rem 2rem;
-  }
-
-  .logo {
-    height: 80px;
-  }
-
-  .header-inner {
-    padding: 0.6rem 0;
   }
 }
