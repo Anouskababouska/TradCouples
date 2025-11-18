@@ -737,3 +737,37 @@ main {
   white-space: nowrap;               /* prevents line break */
   font-size: clamp(1.4rem, 4.3vw, 2.6rem);
 }
+.early-access {
+  padding: 4rem 1.5rem;
+}
+
+.early-access-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* Left image card */
+.early-access-image {
+  flex: 1;
+}
+
+.early-access-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Right form card */
+.early-access-form {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem 2.75rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
