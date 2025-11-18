@@ -791,3 +791,35 @@ main {
   padding: 2.5rem 2.75rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
+/* === FIX: Tagline & overflow === */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sure the welcome section cannot push wider than the screen */
+.longform-section .container,
+.longform-inner,
+.longform-text,
+.longform-media {
+  max-width: 100%;
+}
+
+/* FAITH. FAMILY. FREEDOM. – final override */
+.longform-text .tagline {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(1rem, 4vw, 1.6rem); /* smaller on phones, reasonable on desktop */
+  line-height: 1.3;
+  margin: 0 0 1.3rem;
+  white-space: normal;                 /* allow wrapping, no more pushing off-screen */
+}
+/* === FIX: subscription image height on mobile === */
+
+.subscription-media {
+  min-height: 260px;
+}
