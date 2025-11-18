@@ -740,7 +740,7 @@ main {
 /* Mobile: make it smaller so it fits */
 @media (max-width: 600px) {
   .tagline {
-    font-size: 4vw;       /* scales with screen width */
+    font-size: 3.6vw;       /* scales with screen width */
     letter-spacing: 0.08em;
   }
 }
