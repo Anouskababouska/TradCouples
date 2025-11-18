@@ -727,13 +727,33 @@ main {
 }
 
 /* RESPONSIVE – PHONES */
-
 @media (max-width: 600px) {
+  /* Smaller logo, keep aspect ratio */
   .logo {
-    height: 48px;
-    max-width: 170px;
+    max-height: 40px;
+    height: auto;
+    width: auto;
   }
 
+  /* Slimmer header on mobile */
+  .header-inner {
+    padding: 0.6rem 0;
+    gap: 1.5rem;
+  }
+
+  /* Slightly tighter nav */
+  .nav-list {
+    gap: 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  /* Smaller CTA button in the header */
+  .header-inner .cta {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.8rem;
+  }
+
+  /* Keep the rest as before */
   .btn {
     width: 100%;
   }
