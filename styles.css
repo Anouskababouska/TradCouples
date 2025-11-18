@@ -728,32 +728,29 @@ main {
   .plan-card {
     padding: 2.4rem 2rem;
   }
-}/* FAITH. FAMILY. FREEDOM. */
-/* Default (desktop + tablet) */
+/* FAITH. FAMILY. FREEDOM. – base style (desktop + tablet) */
 .tagline {
   font-weight: 700;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
   white-space: nowrap;
-  font-size: 2rem;            /* Clean fixed desktop size */
-  line-height: 1.2;
-  margin: 0 0 1.5rem 0;       /* Prevent overlap */
+  font-size: 1.2rem;      /* was 2rem – now much smaller */
+  letter-spacing: 0.06em; /* tighter spacing */
+  line-height: 1.3;
+  margin: 0 0 1.2rem;
 }
 
-/* Mobile override */
+/* Phones */
 @media (max-width: 600px) {
   .tagline {
-    font-size: 1.25rem;       /* Much smaller for phones */
-    letter-spacing: 0.08em;
+    font-size: 1.0rem;    /* even smaller on mobile */
+    letter-spacing: 0.04em;
   }
 }
 
-
-}
+/* Early access section */
 .early-access {
   padding: 4rem 1.5rem;
 }
-
 .early-access-inner {
   max-width: 1100px;
   margin: 0 auto;
