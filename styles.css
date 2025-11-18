@@ -174,7 +174,7 @@ main {
 .hero-media {
   min-height: clamp(280px, 38vw, 420px);
   border-radius: 28px;
-  background-image: url("assets/hero-couple-field.png");
+  background-image: url("assets/hero-couple-anchor.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
