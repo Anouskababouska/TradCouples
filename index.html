@@ -1,793 +1,234 @@
-:root {
-  --navy: #0e2a47;
-  --cta-blue: #1e5a8b;
-  --soft-sky: #d8e3ed;
-  --page-bg: #f0f4f9;
-  --hero-warm: #f7f4ef;
-  --white: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
-  background: radial-gradient(circle at top, rgba(30, 90, 139, 0.18), transparent 55%),
-    linear-gradient(180deg, #0b233d 0%, #0e2a47 35%, #0b1c32 100%);
-  color: var(--white);
-  scroll-behavior: smooth;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible {
-  outline: 3px solid rgba(216, 227, 237, 0.6);
-  outline-offset: 4px;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1180px, 92vw);
-  margin: 0 auto;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.95rem 2.75rem;
-  border-radius: 999px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.95rem;
-  background: var(--cta-blue);
-  color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 18px 40px rgba(30, 90, 139, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 22px 48px rgba(14, 42, 71, 0.35);
-}
-
-/* HEADER */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(14, 42, 71, 0.98);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(216, 227, 237, 0.25);
-  box-shadow: 0 18px 28px rgba(4, 12, 21, 0.45);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  gap: clamp(1rem, 3vw, 3rem);
-  padding: clamp(0.9rem, 1.4vw, 1.2rem) 0;
-}
-
-/* LOGO – desktop */
-.logo {
-  max-height: 80px;
-  width: auto;
-  height: auto;
-  filter: brightness(1.25);
-}
-
-.site-nav {
-  margin-left: auto;
-}
-
-.nav-list {
-  display: flex;
-  gap: clamp(1.5rem, 2.5vw, 2.8rem);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-}
-
-.nav-list a {
-  position: relative;
-  color: rgba(255, 255, 255, 0.82);
-  padding-bottom: 0.2rem;
-}
-
-.nav-list a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: var(--cta-blue);
-  transition: transform 0.25s ease;
-}
-
-.nav-list a:hover::after,
-.nav-list a:focus-visible::after {
-  transform: scaleX(1);
-}
-
-.header-inner .cta {
-  margin-left: clamp(1rem, 3vw, 3.5rem);
-  white-space: nowrap;
-}
-
-/* MAIN */
-
-main {
-  padding-bottom: 5rem;
-}
-
-/* HERO */
-
-.hero {
-  padding: clamp(5rem, 12vw, 8rem) 0 clamp(4rem, 10vw, 7rem);
-  background: linear-gradient(
-    135deg,
-    rgba(247, 244, 239, 0.14) 0%,
-    rgba(30, 90, 139, 0.35) 45%,
-    rgba(14, 42, 71, 0.4) 100%
-  );
-}
-
-.hero-inner {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(2.5rem, 5vw, 4.5rem);
-  align-items: center;
-}
-
-.hero-copy h1 {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2.7rem, 5vw, 3.8rem);
-  line-height: 1.08;
-  margin: 0 0 1.6rem;
-  color: var(--white);
-}
-
-.hero-copy p {
-  margin: 0 0 2.2rem;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.hero-media {
-  min-height: clamp(280px, 38vw, 420px);
-  border-radius: 28px;
-  background-image: url("assets/hero-couple-anchor.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border: 1px solid rgba(216, 227, 237, 0.35);
-  box-shadow: 0 28px 60px rgba(6, 17, 30, 0.5);
-}
-
-/* SECTION TITLES */
-
-.section-title {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2.1rem, 3.5vw, 2.8rem);
-  text-align: center;
-  margin: 0 0 2.8rem;
-  color: var(--navy);
-}
-
-/* CARDS */
-
-.cards-section {
-  background: var(--page-bg);
-  color: var(--navy);
-  padding: clamp(4rem, 8vw, 6rem) 0;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.card-pair {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.card {
-  background: var(--white);
-  border-radius: 22px;
-  padding: 2.4rem 2.2rem;
-  border: 1px solid rgba(14, 42, 71, 0.08);
-  box-shadow: 0 18px 40px rgba(14, 42, 71, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
-
-.card h3 {
-  margin: 0;
-  letter-spacing: 0.18em;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.card ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-}
-
-.card li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.9rem;
-  align-items: center;
-  font-size: 1rem;
-  color: rgba(14, 42, 71, 0.82);
-}
-
-.icon-check,
-.icon-x {
-  display: inline-grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.icon-check {
-  background: rgba(30, 90, 139, 0.15);
-  color: var(--cta-blue);
-}
-
-.icon-check::before {
-  content: "\2713";
-}
-
-.icon-x {
-  background: rgba(14, 42, 71, 0.12);
-  color: rgba(14, 42, 71, 0.75);
-}
-
-.icon-x::before {
-  content: "\2715";
-}
-
-.card-not-for {
-  background: rgba(216, 227, 237, 0.25);
-  border: 1px solid rgba(30, 90, 139, 0.18);
-}
-
-/* LONGFORM SECTIONS */
-
-.longform-section {
-  padding: clamp(4rem, 9vw, 6rem) 0;
-  color: var(--white);
-}
-
-.longform-section:nth-of-type(odd) {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.longform-section:nth-of-type(even) {
-  background: rgba(8, 20, 36, 0.45);
-}
-
-.longform-inner {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(2.5rem, 5vw, 4.5rem);
-  align-items: center;
-}
-
-.longform-text h2 {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
-  margin: 0 0 1.5rem;
-  color: var(--white);
-}
-
-/* FAITH. FAMILY. FREEDOM. tagline */
-
-.longform-text .tagline {
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  line-height: 1.3;
-  margin: 0 0 1.3rem;
-  /* allow wrapping so it cannot push off-screen */
-  white-space: normal;
-}
-
-.longform-text .eyebrow {
-  letter-spacing: 0.28em;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  color: rgba(216, 227, 237, 0.7);
-}
-
-.longform-text p,
-.longform-text li {
-  color: rgba(240, 244, 249, 0.82);
-  margin: 0 0 1.2rem;
-}
-
-.longform-text ul {
-  margin: 0 0 1.2rem 1.2rem;
-  padding: 0;
-}
-
-.longform-text ul li {
-  margin-bottom: 0.7rem;
-}
-
-.longform-media {
-  min-height: clamp(260px, 35vw, 380px);
-  border-radius: 26px;
-  border: 1px solid rgba(216, 227, 237, 0.25);
-  box-shadow: 0 28px 60px rgba(5, 12, 24, 0.55);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-/* Per-section images */
-
-.media-welcome {
-  background-image: url("assets/welcome-hands.png");
-}
-
-.media-values {
-  background-image: url("assets/safety-couple-field.png");
-}
-
-.media-why {
-  background-image: url("assets/why-online.png");
-}
-
-.media-safety {
-  background-image: url("assets/Your-Safety-family.jpeg");
-}
-
-.media-left {
-  order: -1;
-}
-
-/* PLANS */
-
-.plans-section {
-  background: var(--page-bg);
-  color: var(--navy);
-  padding: clamp(4rem, 8vw, 6rem) 0;
-}
-
-.plan-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(2rem, 3vw, 2.5rem);
-}
-
-.plan-card {
-  background: var(--white);
-  border-radius: 24px;
-  padding: 2.8rem 2.4rem;
-  border: 1px solid rgba(14, 42, 71, 0.08);
-  box-shadow: 0 20px 45px rgba(14, 42, 71, 0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.plan-card h3 {
-  margin: 0;
-  font-size: 1.25rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--navy);
-}
-
-.plan-card p {
-  margin: 0;
-  color: rgba(14, 42, 71, 0.76);
-}
-
-.plan-card .price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-top: 0.5rem;
-}
-
-.plan-card .extra {
-  font-size: 0.95rem;
-  color: rgba(14, 42, 71, 0.65);
-}
-
-.plan-card .btn {
-  margin-top: auto;
-}
-
-.plan-card-featured {
-  position: relative;
-  background: linear-gradient(180deg, rgba(216, 227, 237, 0.55), var(--white));
-  border: 1px solid rgba(30, 90, 139, 0.3);
-  box-shadow: 0 26px 50px rgba(30, 90, 139, 0.25);
-}
-
-.featured-band {
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--cta-blue);
-  color: var(--white);
-  padding: 0.4rem 1.5rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  box-shadow: 0 12px 25px rgba(30, 90, 139, 0.35);
-}
-
-/* SUBSCRIPTION CTA */
-
-.subscription-section {
-  background: var(--page-bg);
-  padding: clamp(4rem, 9vw, 6rem) 0;
-}
-
-.subscription-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-  gap: clamp(2.5rem, 5vw, 4rem);
-  align-items: stretch;
-}
-
-.subscription-media {
-  border-radius: 28px;
-  background-image: url("assets/safety-couple-field.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  box-shadow: 0 28px 60px rgba(6, 17, 30, 0.45);
-  border: 1px solid rgba(216, 227, 237, 0.35);
-}
-
-.subscription-panel {
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 28px;
-  padding: clamp(3rem, 6vw, 4rem);
-  box-shadow: 0 24px 55px rgba(5, 12, 24, 0.5);
-  color: var(--navy);
-  border: 1px solid rgba(216, 227, 237, 0.5);
-}
-
-.subscription-panel h2 {
-  margin: 0 0 1.2rem;
-  font-family: "Playfair Display", "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.subscription-panel p {
-  margin: 0 0 1.2rem;
-  color: rgba(14, 42, 71, 0.8);
-}
-
-.subscription-form {
-  display: grid;
-  gap: 1rem;
-  margin: 1.5rem 0 1.8rem;
-}
-
-.subscription-form label {
-  display: grid;
-  gap: 0.45rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.subscription-form input {
-  padding: 0.9rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(14, 42, 71, 0.25);
-  font: inherit;
-}
-
-.subscription-form input:focus-visible {
-  outline: 3px solid rgba(30, 90, 139, 0.5);
-  outline-offset: 2px;
-}
-
-.subscription-form .btn {
-  justify-self: flex-start;
-}
-
-.subscription-privacy {
-  font-size: 0.9rem;
-  color: rgba(14, 42, 71, 0.7);
-}
-
-.subscription-scripture {
-  font-size: 0.9rem;
-  color: rgba(14, 42, 71, 0.8);
-}
-
-/* FAQ */
-
-.faq-section {
-  padding: clamp(4rem, 9vw, 6rem) 0 clamp(5rem, 10vw, 7rem);
-  background: rgba(8, 20, 36, 0.55);
-}
-
-.faq-section .section-title {
-  color: var(--white);
-}
-
-.faq-subheading {
-  text-align: center;
-  color: rgba(240, 244, 249, 0.78);
-  margin: 0 auto 2.5rem;
-  max-width: 540px;
-}
-
-.accordion {
-  display: grid;
-  gap: 1rem;
-}
-
-.accordion-item {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  border: 1px solid rgba(216, 227, 237, 0.2);
-  padding: 0 1.5rem;
-  box-shadow: 0 18px 40px rgba(5, 12, 24, 0.4);
-}
-
-.accordion-item[open] {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.accordion-item summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 1.4rem 0;
-  font-weight: 600;
-  color: var(--white);
-}
-
-.accordion-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.accordion-item summary::after {
-  content: "+";
-  font-size: 1.4rem;
-  color: rgba(216, 227, 237, 0.9);
-  transition: transform 0.25s ease;
-}
-
-.accordion-item[open] summary::after {
-  transform: rotate(45deg);
-}
-
-.accordion-item p {
-  margin: 0 0 1.4rem;
-  color: rgba(240, 244, 249, 0.82);
-  padding-right: 1.5rem;
-}
-
-/* FOOTER */
-
-.site-footer {
-  background: rgba(6, 15, 27, 0.95);
-  padding: 3rem 0 3.5rem;
-  border-top: 1px solid rgba(216, 227, 237, 0.18);
-}
-
-.footer-inner {
-  text-align: center;
-  display: grid;
-  gap: 1rem;
-}
-
-.footer-brand {
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
-.footer-copy {
-  margin: 0;
-  color: rgba(240, 244, 249, 0.75);
-}
-
-.footer-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  flex-wrap: wrap;
-}
-
-.footer-nav a {
-  color: rgba(216, 227, 237, 0.8);
-  font-size: 0.9rem;
-}
-
-.footer-nav a:hover {
-  color: var(--white);
-}
-
-/* RESPONSIVE – TABLETS / SMALL LAPTOPS */
-
-@media (max-width: 900px) {
-  .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .logo {
-    height: 60px;
-    max-width: 190px;
-  }
-
-  .site-nav {
-    order: 2;
-    width: 100%;
-  }
-
-  .nav-list {
-    justify-content: center;
-  }
-
-  .header-inner .cta {
-    order: 3;
-    margin-left: 0;
-  }
-
-  .hero {
-    text-align: center;
-  }
-
-  .hero-copy {
-    display: grid;
-    justify-items: center;
-  }
-
-  .hero-copy p {
-    max-width: 540px;
-  }
-
-  .card,
-  .plan-card,
-  .subscription-panel,
-  .accordion-item {
-    border-radius: 18px;
-  }
-
-  .media-left {
-    order: unset;
-  }
-
-  .subscription-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .subscription-form .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* RESPONSIVE – PHONES */
-
-@media (max-width: 600px) {
-  .logo {
-    height: 48px;
-    max-width: 170px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .hero-copy {
-    width: 100%;
-  }
-
-  .hero-media,
-  .longform-media {
-    min-height: 240px;
-  }
-
-  .plan-card {
-    padding: 2.4rem 2rem;
-  }
-
-  .longform-section .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/* OPTIONAL EARLY ACCESS LAYOUT (if used) */
-
-.early-access {
-  padding: 4rem 1.5rem;
-}
-
-.early-access-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 2.5rem;
-  align-items: stretch;
-}
-
-.early-access-image {
-  flex: 1;
-}
-
-.early-access-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 24px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
-}
-
-.early-access-form {
-  flex: 1;
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 2.5rem 2.75rem;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradCouples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link" aria-label="TradCouples home">
+        <img src="assets/tradcouples-logo-whiter.png" alt="TradCouples logo" class="logo" />
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#welcome">How It Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn cta" href="#subscription">GET STARTED</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>MATCHMAKING FOR TRADITIONAL CONSERVATIVE COUPLES</h1>
+          <p>Experience a refined matchmaking journey that honours your values and fosters meaningful, purpose-driven connections.</p>
+          <a class="btn cta" href="#subscription">START YOUR JOURNEY</a>
+        </div>
+        <div class="hero-media" role="presentation" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- WELCOME -->
+    <section id="welcome" class="longform-section alt-image-right">
+      <div class="container longform-inner">
+        <div class="longform-text">
+          <p class="eyebrow">WELCOME TO TRADCOUPLES</p>
+          <h2 class="tagline">FAITH. FAMILY. FREEDOM.</h2>
+          <p>In a world that often shifts from timeless values, we stand for what matters: real relationships, traditional principles, Christian faith, strength, and family.</p>
+          <p>Are you looking for a partner who shares your beliefs, honours commitment, and values purpose over convenience? Someone who embraces faith, family roles, and long-term connection?</p>
+          <p>Join thousands of like-minded individuals who are taking their love lives back from a broken modern dating culture. We do not apologise for tradition — we celebrate it.</p>
+        </div>
+        <div class="longform-media media-welcome" role="presentation" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- OUR VALUES (UPDATED) -->
+    <section id="values" class="longform-section alt-image-left">
+      <div class="container longform-inner">
+        <div class="longform-media media-values" role="presentation" aria-hidden="true"></div>
+
+        <div class="longform-text">
+          <h2>Our Values</h2>
+          <ul>
+            <li>Cherishing tradition and time-tested family roles.</li>
+            <li>Embracing Christian values and a faith-centred life.</li>
+            <li>Restoring and strengthening the nuclear family.</li>
+          </ul>
+          <p>These values are built into every part of TradCouples — from how we match you, to how we design the platform, to the culture we protect inside the community.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY TRADCOUPLES -->
+    <section class="longform-section alt-image-right">
+      <div class="container longform-inner">
+        <div class="longform-text">
+          <h2>Why TradCouples</h2>
+          <ul>
+            <li>Matchmaking based on shared beliefs and long-term goals</li>
+            <li>Profiles that prioritise commitment over casual dating</li>
+            <li>Real filters — no endless scrolling</li>
+            <li>No confusion, no agendas — just clarity, purpose, and conviction</li>
+            <li>A personal, human-centred approach to modern matchmaking</li>
+          </ul>
+          <p>This is old-fashioned matchmaking in a high-tech world — intentional, meaningful, and built for those who value faith, family, and commitment.</p>
+          <p>Like a trusted aunt gently setting you up, our process is thoughtful and careful — with the added benefit that you can review profiles and compatibility before you take the next step.</p>
+        </div>
+        <div class="longform-media media-why" role="presentation" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="longform-section alt-image-left">
+      <div class="container longform-inner">
+        <div class="longform-media media-safety" role="presentation" aria-hidden="true"></div>
+        <div class="longform-text">
+          <h2>Your Safety, Our Priority</h2>
+          <p>We understand the importance of a safe, respectful environment when seeking a serious relationship. TradCouples takes privacy and security seriously, with strict verification processes to protect your experience.</p>
+          <p>Our commitment is simple: we safeguard the platform so you can focus on what truly matters — finding someone who shares your values, faith, and dreams.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="plans" class="plans-section" aria-labelledby="plans-heading">
+      <div class="container">
+        <h2 id="plans-heading" class="section-title">SUBSCRIPTION PLANS</h2>
+        <div class="plan-cards">
+          <article class="plan-card">
+            <h3>Free Trial</h3>
+            <p>14 days of full Premium access</p>
+            <p>All browsing restrictions removed during your trial</p>
+            <p class="price">14 days free</p>
+            <a class="btn cta" href="#subscription">START TRIAL</a>
+          </article>
+          <article class="plan-card plan-card-featured">
+            <div class="featured-band">Most Popular</div>
+            <h3>Premium</h3>
+            <p>Unlimited messaging</p>
+            <p>Full compatibility scores</p>
+            <p class="price">$19.90 / month</p>
+            <p class="extra">Full access to messaging, compatibility tools, and advanced filters</p>
+            <a class="btn cta" href="#subscription">GET STARTED</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section id="subscription" class="subscription-section" aria-labelledby="subscription-heading">
+      <div class="container subscription-grid">
+        <div class="subscription-media" role="presentation" aria-hidden="true"></div>
+
+        <div class="subscription-panel">
+          <h2 id="subscription-heading">Subscribe for early access</h2>
+          <p>
+            Our site officially launches mid 2025. Subscribe now to receive a free or discounted profile
+            and secure your place among the first members.
+          </p>
+
+          <form class="subscription-form" action="#" method="post">
+            <label>
+              Email address*
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Name
+              <input type="text" name="name" />
+            </label>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+
+          <p class="subscription-privacy">
+            Your privacy is our priority. We will keep your information secure and private.
+          </p>
+
+          <p class="subscription-scripture">
+            <em>“Then the Lord God said, ‘It is not good that the man should be alone; I will make him a helper fit for him.’” – Genesis 2:18</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title">Popular Frequently Asked Questions</h2>
+        <p class="faq-subheading">Do you have a question regarding our service?</p>
+        <div class="accordion" role="list">
+          <details class="accordion-item">
+            <summary>What is TradCouples, and how does it differ from other dating sites?</summary>
+            <p>TradCouples is a values-based matchmaking platform created for singles who prioritise faith, family, and long-term commitment. There is no endless scrolling or casual dating culture. Instead, we use an intentional, curated approach designed to help you find someone who shares your beliefs and relationship goals. Only men looking for women and women looking for men are accepted. No hookup culture.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>Who is TradCouples for?</summary>
+            <p>TradCouples is for singles who want a relationship built on traditional frameworks — where commitment, faith, and shared values form the foundation. Many members prefer clear relationship roles, long-term goals, and a family-centred lifestyle.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>How does TradCouples maintain a safe and respectful environment?</summary>
+            <p>We take safety seriously. Through identity verification, community guidelines, and active moderation, we ensure TradCouples remains a trustworthy, respectful space for like-minded individuals pursuing meaningful relationships.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>How do I sign up?</summary>
+            <p>Click “Start Your Journey” on the homepage, create your profile, and complete our verification process. Once approved, you can browse profiles and begin connecting with compatible members.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>Is there a membership fee?</summary>
+            <p>Yes. We offer tiered membership options with increasing levels of access and features. This helps maintain a high-quality community and ensures that matches are serious and intentional. See our pricing section for details.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>Do I have to be religious to join?</summary>
+            <p>While many of our members are people of faith, it is not a requirement. The core expectation is a commitment to traditional values, family-centred living, and purposeful relationships.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>How do I create a profile?</summary>
+            <p>Sign up for free and complete your profile details to reflect your values, lifestyle, and relationship goals. The more accurate your profile, the better your match results.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>How does the matchmaking process work?</summary>
+            <p>After registration, you will complete a detailed profile about your values, long-term goals, and lifestyle preferences. Our algorithm — combined with human review — suggests members who align with your beliefs and relationship intentions.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>How do I find the right match?</summary>
+            <p>Our system highlights profiles based on your compatibility preferences. You can then explore, communicate, and build connections with people who resonate with your lifestyle and values.</p>
+          </details>
+          <details class="accordion-item">
+            <summary>Can I set specific preferences for my matches?</summary>
+            <p>Yes. You can personalise your preferences across age, location, faith alignment, lifestyle values, family goals, and relationship priorities.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">TRADCOUPLES – FAITH. FAMILY. FREEDOM.</p>
+      <p class="footer-copy">© TradCouples 2024. All rights reserved.</p>
+      <nav aria-label="Footer" class="footer-nav">
+        <ul>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Safety Tips</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
